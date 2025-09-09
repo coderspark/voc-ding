@@ -1,22 +1,41 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b6osua7h5uv17"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b6osua7h5uv17"]
 
-[ext_resource type="Texture2D" uid="uid://daynmlqm5mcli" path="res://Art/Atlas/Atlas.png" id="1_trmi1"]
+[ext_resource type="Texture2D" uid="uid://daynmlqm5mcli" path="res://Art/Atlas/Atlas.png" id="1_ejw76"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3exke"]
+vertices = PackedVector2Array(8, -4, 8, 4, 0, 8, -8, 4, -8, -4, 0, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, -8, -8, -4, -8, 4, 0, 8, 8, 4, 8, -4)])
+agent_radius = 0.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ejw76"]
+vertices = PackedVector2Array(8, -4, 8, 4, 0, 8, -8, 4, -8, -4, 0, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, -8, -8, -4, -8, 4, 0, 8, 8, 4, 8, -4)])
+agent_radius = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hov3y"]
-texture = ExtResource("1_trmi1")
+texture = ExtResource("1_ejw76")
 0:0/0 = 0
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3exke")
 1:0/0 = 0
+1:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3exke")
 2:0/0 = 0
+2:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3exke")
 3:0/0 = 0
+3:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3exke")
 4:0/0 = 0
+4:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3exke")
 4:1/0 = 0
 4:2/0 = 0
 4:3/0 = 0
 5:0/0 = 0
+5:0/0/navigation_layer_1/polygon = SubResource("NavigationPolygon_ejw76")
 5:1/0 = 0
 5:2/0 = 0
 5:3/0 = 0
 6:0/0 = 0
+6:0/0/navigation_layer_1/polygon = SubResource("NavigationPolygon_ejw76")
 6:1/0 = 0
 6:2/0 = 0
 6:3/0 = 0
@@ -57,9 +76,11 @@ texture = ExtResource("1_trmi1")
 15:2/0 = 0
 15:3/0 = 0
 0:1/0 = 0
+0:1/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3exke")
 0:2/0 = 0
 0:3/0 = 0
 1:1/0 = 0
+1:1/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_3exke")
 1:2/0 = 0
 1:3/0 = 0
 2:1/0 = 0
@@ -135,4 +156,6 @@ texture = ExtResource("1_trmi1")
 
 [resource]
 tile_shape = 3
+navigation_layer_0/layers = 2
+navigation_layer_1/layers = 4
 sources/0 = SubResource("TileSetAtlasSource_hov3y")

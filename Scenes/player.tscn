@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://uxsgyx5q7kwm"]
+[gd_scene load_steps=11 format=3 uid="uid://uxsgyx5q7kwm"]
 
 [ext_resource type="Texture2D" uid="uid://cmtgio3fr0s5s" path="res://Art/Animations/PlayerBoat/boat1.png" id="1_3smsa"]
+[ext_resource type="Script" uid="uid://bqhjwnm2l3mmt" path="res://Scenes/player.gd" id="1_8erm5"]
 [ext_resource type="Texture2D" uid="uid://dwhyyfk5inuh4" path="res://Art/Animations/PlayerBoat/boat2.png" id="2_8erm5"]
 [ext_resource type="Texture2D" uid="uid://jifpxbjtw2tr" path="res://Art/Animations/PlayerBoat/boat3.png" id="3_f1ek2"]
 [ext_resource type="Texture2D" uid="uid://ba1yxv2xe7udy" path="res://Art/Animations/PlayerBoat/boat4.png" id="4_tx1dd"]
@@ -37,14 +38,33 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8erm5"]
+size = Vector2(12, 9.5)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_8erm5")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_7dp3o")
 autoplay = "default"
-frame_progress = 0.0748607
+frame_progress = 0.285753
 speed_scale = 2.0
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+
+[node name="Navigation" type="NavigationAgent2D" parent="."]
+path_desired_distance = 5.0
+target_desired_distance = 5.0
+navigation_layers = 4
+path_postprocessing = 1
+avoidance_layers = 3
+avoidance_mask = 3
+debug_enabled = true
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_8erm5")
+disabled = true

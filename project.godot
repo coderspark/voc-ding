@@ -24,6 +24,11 @@ folder_colors={
 "res://Scenes/": "orange"
 }
 
+[layer_names]
+
+2d_navigation/layer_2="NavObstacle"
+2d_navigation/layer_3="NavMoveable"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
