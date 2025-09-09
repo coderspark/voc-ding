@@ -1,3 +1,8 @@
+res://Scenes/node_2d.tscn
+res://Tiles.tres
+res://Scenes/player.tscn
 res://Scenes/map_1.tscn
 res://Resources/Tiles.tres
 res://Scenes/player.gd
+res://Scenes/terrain.gd
+res://Scenes/camera.gd
