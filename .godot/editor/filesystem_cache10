@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1757426413
+::res://::1757429916
 ::res://Art/::1757426398
 ::res://Art/Animations/::1757426398
 ::res://Art/Animations/EnemyBoat/::1757426398
@@ -26,9 +26,11 @@ food.png::CompressedTexture2D/CompressedTexture2D::4539357709738962443::17574263
 spices.png::CompressedTexture2D/CompressedTexture2D::4308441131254324950::1757426398::1757426398::1::::<><><>0<>0<>44c626dc119c3bd65814ca5d5fa495f5<>res://.godot/imported/spices.png-bca2c895525554006023d2f23ba4b807.ctex::
 ::res://Art/Temporary/::1757426398
 icon.svg::CompressedTexture2D/CompressedTexture2D::6393099470889593116::1757426398::1757426398::1::::<><><>0<>0<>df3f5b26740443f58b35360eae824d6f<>res://.godot/imported/icon.svg-44a6659a48167e7c631b2965c5b91f97.ctex::
-::res://Resources/::1757426398
-Tiles.tres::TileSet::4592304796569526728::1757426398::0::1::::<><><>0<>0<><>::uid://daynmlqm5mcli::::res://Art/Atlas/Atlas.png
-::res://Scenes/::1757426398
-map_1.tscn::PackedScene::3098375260007101693::1757426398::0::1::::<><><>0<>0<><>::uid://b6osua7h5uv17::::res://Resources/Tiles.tres<>uid://uxsgyx5q7kwm::::res://Scenes/player.tscn
-player.gd::GDScript::3524479269164619339::1757426398::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::1452362479213867424::1757426398::0::1::::<><><>0<>0<><>::uid://cmtgio3fr0s5s::::res://Art/Animations/PlayerBoat/boat1.png<>uid://bqhjwnm2l3mmt::::res://Scenes/player.gd<>uid://dwhyyfk5inuh4::::res://Art/Animations/PlayerBoat/boat2.png<>uid://jifpxbjtw2tr::::res://Art/Animations/PlayerBoat/boat3.png<>uid://ba1yxv2xe7udy::::res://Art/Animations/PlayerBoat/boat4.png<>uid://bu3di68i1v6jt::::res://Art/Animations/PlayerBoat/boat5.png<>uid://c1utllhjf6833::::res://Art/Animations/PlayerBoat/boat6.png<>uid://chhqxoh6pcrno::::res://Art/Animations/PlayerBoat/boat7.png
+::res://Resources/::1757429869
+Tiles.tres::TileSet::4592304796569526728::1757429869::0::1::::<><><>0<>0<><>::uid://daynmlqm5mcli::::res://Art/Atlas/Atlas.png
+::res://Scenes/::1757429869
+camera.gd::GDScript::2177091188062982818::1757429869::0::1::::<>Node2D<><>0<>0<><>::
+map_1.tscn::PackedScene::3098375260007101693::1757429869::0::1::::<><><>0<>0<><>::uid://b6osua7h5uv17::::res://Resources/Tiles.tres<>uid://6aumydptblmg::::res://Scenes/camera.gd<>uid://uxsgyx5q7kwm::::res://Scenes/player.tscn<>uid://dp8mh5mx1njtb::::res://Scenes/terrain.gd
+player.gd::GDScript::3524479269164619339::1757429869::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::1452362479213867424::1757429869::0::1::::<><><>0<>0<><>::uid://cmtgio3fr0s5s::::res://Art/Animations/PlayerBoat/boat1.png<>uid://bqhjwnm2l3mmt::::res://Scenes/player.gd<>uid://dwhyyfk5inuh4::::res://Art/Animations/PlayerBoat/boat2.png<>uid://jifpxbjtw2tr::::res://Art/Animations/PlayerBoat/boat3.png<>uid://ba1yxv2xe7udy::::res://Art/Animations/PlayerBoat/boat4.png<>uid://bu3di68i1v6jt::::res://Art/Animations/PlayerBoat/boat5.png<>uid://c1utllhjf6833::::res://Art/Animations/PlayerBoat/boat6.png<>uid://chhqxoh6pcrno::::res://Art/Animations/PlayerBoat/boat7.png
+terrain.gd::GDScript::8280961871322732179::1757428481::0::1::::<>TileMapLayer<><>0<>0<><>::
