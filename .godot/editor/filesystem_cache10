@@ -1,0 +1,8 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1757421720
+Atlas.png::CompressedTexture2D/CompressedTexture2D::7209618470669072326::1757421708::1757420188::1::::<><><>0<>0<>988ed250adb7cff5a8ebab5e60744805<>res://.godot/imported/Atlas.png-c16458a530efe525269df0bd8b33df21.ctex::
+food.png::CompressedTexture2D/CompressedTexture2D::4539357709738962443::1757328990::1757406013::1::::<><><>0<>0<>bb08bf5e312df0edc244c363f1b7561b<>res://.godot/imported/food.png-307f01b24fbecd1cd83e0d8f0146558e.ctex::
+icon.svg::CompressedTexture2D/CompressedTexture2D::6393099470889593116::1757405489::1757405493::1::::<><><>0<>0<>5d18f886c5e0fce70f6898f042ff5194<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+node_2d.tscn::PackedScene::3098375260007101693::1757420212::0::1::::<><><>0<>0<><>::uid://b6osua7h5uv17::::res://Tiles.tres
+spices.png::CompressedTexture2D/CompressedTexture2D::4308441131254324950::1757316880::1757406013::1::::<><><>0<>0<>187ebf0cc282dcfc7ebd0e4cac54e71a<>res://.godot/imported/spices.png-bd7f4062094c363dccc11ad55bdcf975.ctex::
+Tiles.tres::TileSet::4592304796569526728::1757420192::0::1::::<><><>0<>0<><>::uid://daynmlqm5mcli::::res://Atlas.png
