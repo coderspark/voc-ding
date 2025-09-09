@@ -52,9 +52,6 @@ autoplay = "default"
 frame_progress = 0.285753
 speed_scale = 2.0
 
-[node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
-
 [node name="Navigation" type="NavigationAgent2D" parent="."]
 path_desired_distance = 5.0
 target_desired_distance = 5.0
