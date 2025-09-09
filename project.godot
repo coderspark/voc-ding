@@ -13,7 +13,16 @@ config_version=5
 config/name="Voc ding"
 run/main_scene="uid://bke41102xy33f"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Art/Temporary/icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Art/": "yellow",
+"res://Code/": "green",
+"res://Resources/": "blue",
+"res://Scenes/": "orange"
+}
 
 [rendering]
 
