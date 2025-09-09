@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://uxsgyx5q7kwm"]
+[gd_scene load_steps=9 format=3 uid="uid://uxsgyx5q7kwm"]
+
+[ext_resource type="Texture2D" uid="uid://cmtgio3fr0s5s" path="res://Art/Animations/PlayerBoat/boat1.png" id="1_3smsa"]
+[ext_resource type="Texture2D" uid="uid://dwhyyfk5inuh4" path="res://Art/Animations/PlayerBoat/boat2.png" id="2_8erm5"]
+[ext_resource type="Texture2D" uid="uid://jifpxbjtw2tr" path="res://Art/Animations/PlayerBoat/boat3.png" id="3_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://ba1yxv2xe7udy" path="res://Art/Animations/PlayerBoat/boat4.png" id="4_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://bu3di68i1v6jt" path="res://Art/Animations/PlayerBoat/boat5.png" id="5_gymyn"]
+[ext_resource type="Texture2D" uid="uid://c1utllhjf6833" path="res://Art/Animations/PlayerBoat/boat6.png" id="6_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://chhqxoh6pcrno" path="res://Art/Animations/PlayerBoat/boat7.png" id="7_ukyrk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7dp3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3smsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8erm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f1ek2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tx1dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gymyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pu2lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ukyrk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="Node2D"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_7dp3o")
+autoplay = "default"
+frame_progress = 0.0748607
+speed_scale = 2.0
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)

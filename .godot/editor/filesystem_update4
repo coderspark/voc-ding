@@ -1,1 +1,4 @@
+res://Scenes/node_2d.tscn
 res://Tiles.tres
+res://Scenes/player.tscn
+res://Scenes/map_1.tscn
