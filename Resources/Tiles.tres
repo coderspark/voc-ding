@@ -1,8 +1,14 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b6osua7h5uv17"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://b6osua7h5uv17"]
 
 [ext_resource type="Texture2D" uid="uid://daynmlqm5mcli" path="res://Art/Atlas/Atlas.png" id="1_ejw76"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3exke"]
+vertices = PackedVector2Array(8, -4, 8, 4, 0, 8, -8, 4, -8, -4, 0, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, -8, -8, -4, -8, 4, 0, 8, 8, 4, 8, -4)])
+agent_radius = 0.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_6v5et"]
 vertices = PackedVector2Array(8, -4, 8, 4, 0, 8, -8, 4, -8, -4, 0, -8)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, -8, -8, -4, -8, 4, 0, 8, 8, 4, 8, -4)])
@@ -72,6 +78,7 @@ texture = ExtResource("1_ejw76")
 14:2/0 = 0
 14:3/0 = 0
 15:0/0 = 0
+15:0/0/navigation_layer_1/polygon = SubResource("NavigationPolygon_6v5et")
 15:1/0 = 0
 15:2/0 = 0
 15:3/0 = 0
