@@ -1,8 +1,8 @@
+Timer
 Label
 Sprite2D
 CanvasLayer
 Control
-Timer
 Node2D
 CollisionShape2D
 CharacterBody2D
