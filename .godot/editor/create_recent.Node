@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 Sprite2D
+=======
+CanvasLayer
+Control
+>>>>>>> cc10a71785954de18f22b41b6f771dac71a7fd49
 Label
 Timer
 Node2D

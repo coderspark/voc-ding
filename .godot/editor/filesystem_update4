@@ -2,3 +2,11 @@ res://Scenes/map_1.tscn
 res://Resources/Tiles.tres
 res://perlin.gd
 res://Scenes/player.tscn
+<<<<<<< HEAD
+=======
+res://Scenes/camera.gd
+res://Scenes/player.gd
+res://global.gd
+res://README.md
+res://Scenes/ui.tscn
+>>>>>>> cc10a71785954de18f22b41b6f771dac71a7fd49
