@@ -9,3 +9,4 @@ func show_dialogue(text:String,character:String):
 
 func _ready() -> void:
 	show_dialogue("Hello there, fellow traveler!","Mary")
+	show_dialogue("Kill yourself, NOW!","Mary")
