@@ -20,7 +20,7 @@ func Generate(noiseseed):
 					break
 			set_cell(Vector2i(x-64, y-64), 0, atlascoords)
 func _ready():
-	Generate(randi())
+	Generate(randi_range(0,1000000))
 func _input(event: InputEvent) -> void:
 	if event.is_action("lmb") and event.is_pressed():
 		$"../Player"._on_terrain_click(map_to_local(local_to_map(get_global_mouse_position())))
