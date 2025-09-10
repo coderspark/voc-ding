@@ -1,0 +1,5 @@
+res://Scenes/map_1.tscn
+res://Resources/Tiles.tres
+res://Code/terrain.gd
+res://Scenes/player.tscn
+res://Scenes/ui.tscn
