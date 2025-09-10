@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnv8u5qxyxnof"]
+[gd_scene load_steps=4 format=3 uid="uid://bnv8u5qxyxnof"]
 
 [ext_resource type="Texture2D" uid="uid://m8w1sb8n03tp" path="res://Art/dialogue_background.png" id="1_jxero"]
+[ext_resource type="Script" uid="uid://bo0migcv1yfd4" path="res://Code/dialogue.gd" id="1_nf4gj"]
 [ext_resource type="Theme" uid="uid://di435lx1s86i2" path="res://Resources/dialogue.tres" id="2_qdvrb"]
 
 [node name="UI" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nf4gj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -18,11 +20,14 @@ position = Vector2(575, 539)
 scale = Vector2(18, 18)
 texture = ExtResource("1_jxero")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Text" type="Label" parent="CanvasLayer"]
 offset_left = 236.0
 offset_top = 460.0
 offset_right = 1102.0
 offset_bottom = 602.0
 theme = ExtResource("2_qdvrb")
-text = "heyyyyy deidede de de d  d dddddd dddd dddd d d d ddddddddddddddddddddddddd dddddddddddddd dedededed"
 autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true

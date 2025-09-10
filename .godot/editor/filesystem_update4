@@ -5,3 +5,4 @@ res://Scenes/ui.tscn
 res://Scenes/map_1.tscn
 res://Code/player.gd
 res://Resources/dialogue.tres
+res://Code/dialogue.gd
