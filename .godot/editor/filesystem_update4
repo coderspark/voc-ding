@@ -2,5 +2,4 @@ res://Scenes/map_1.tscn
 res://Resources/Tiles.tres
 res://Scenes/player.tscn
 res://Scenes/ui.tscn
-res://Code/terrain.gd
-res://Code/camera.gd
+res://Scenes/fog.gd
