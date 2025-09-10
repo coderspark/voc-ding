@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://di435lx1s86i2"]
+
+[ext_resource type="FontFile" uid="uid://d2ksrw0nqx5b3" path="res://Fonts/Jersey10-Regular.ttf" id="1_gkhio"]
+
+[resource]
+Label/constants/line_spacing = -7
+Label/font_sizes/font_size = 48
+Label/fonts/font = ExtResource("1_gkhio")

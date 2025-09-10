@@ -17,13 +17,14 @@ config/icon="res://Art/Temporary/icon.svg"
 
 [autoload]
 
-Global="*res://global.gd"
+Global="*res://Code/global.gd"
 
 [file_customization]
 
 folder_colors={
 "res://Art/": "yellow",
 "res://Code/": "green",
+"res://Fonts/": "pink",
 "res://Resources/": "blue",
 "res://Scenes/": "orange"
 }

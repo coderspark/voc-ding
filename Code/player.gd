@@ -18,7 +18,6 @@ func _ready() -> void:
 			$"../Fog".set_cell(cell,0,Vector2i(15,1))
 
 func _process(delta: float) -> void:
-	$Label.text = "FPS: " + str(1/delta)
 	if Input.is_action_just_pressed("left"):
 		if on_water:
 			go_on_land()
@@ -26,7 +25,7 @@ func _process(delta: float) -> void:
 			go_on_water()
 	if move:
 		var dir = to_local($Navigation.get_next_path_position()).normalized()
-		velocity = dir * 1100 * delta
+		velocity = dir * 60
 		if dir.x > 0:
 			if dir.x * old_dir_x > 0:
 				$Sprite.flip_h = true
