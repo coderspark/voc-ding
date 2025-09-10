@@ -73,7 +73,7 @@ func go_on_land():
 func go_on_water():
 	for n in $"../Terrain".get_surrounding_cells($"../Terrain".local_to_map(position)):
 		if $"../Terrain".get_cell_atlas_coords(n) in Global.water_types:
-			position = $"../Terrain".map_to_local(n)	
+			position = $"../Terrain".map_to_local(n)
 			$Navigation.navigation_layers = 4
 			$Sprite.play("water")
 			on_water = true

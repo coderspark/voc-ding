@@ -4,3 +4,5 @@ res://Scenes/player.tscn
 res://Scenes/camera.gd
 res://Scenes/player.gd
 res://global.gd
+res://README.md
+res://Scenes/ui.tscn

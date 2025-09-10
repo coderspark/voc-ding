@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnv8u5qxyxnof"]
+
+[ext_resource type="Texture2D" uid="uid://m8w1sb8n03tp" path="res://Art/dialogue_background.png" id="1_jxero"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBackground" type="Sprite2D" parent="."]
+position = Vector2(607, 540)
+scale = Vector2(20, 20)
+texture = ExtResource("1_jxero")
