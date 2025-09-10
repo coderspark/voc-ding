@@ -5,20 +5,33 @@ const tiledepths = {
 	0.2: Vector2i(5, 0),
 	1.0: Vector2i(0, 0),
 }
+const biomedepths = {
+	-0.3: Vector2i(3, 0),
+	0.2: Vector2i(0, 0),
+	1.0: Vector2i(0, 1),
+}
 
 func Generate(noiseseed):
 	var noise = NoiseTexture2D.new()
+	var biomenoise = NoiseTexture2D.new()
 	noise.noise = FastNoiseLite.new()
+	biomenoise.noise = FastNoiseLite.new()
 	noise.noise.seed = noiseseed
-	for y in range(128):
-		for x in range(128):
+	biomenoise.noise.seed = noiseseed + 1
+	for y in range(256):
+		for x in range(256):
 			var perlincoord = noise.noise.get_noise_2d(x, y)
 			var atlascoords = Vector2i()
 			for d in tiledepths.keys():
 				if perlincoord < d:
 					atlascoords = tiledepths[d]
 					break
-			set_cell(Vector2i(x-64, y-64), 0, atlascoords)
+			if atlascoords == Vector2i(0, 0):
+				for d in biomedepths.keys():
+					if biomenoise.noise.get_noise_2d(x, y) < d:
+						atlascoords = biomedepths[d]
+						break
+			set_cell(Vector2i(x-128, y-128), 0, atlascoords)
 func _ready():
 	Generate(randi())
 func _input(event: InputEvent) -> void:

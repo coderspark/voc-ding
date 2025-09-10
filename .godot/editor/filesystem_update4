@@ -1,8 +1,6 @@
-res://Code/terrain.gd
-res://Scenes/player.tscn
-res://Resources/Tiles.tres
-res://Scenes/ui.tscn
 res://Scenes/map_1.tscn
-res://Code/player.gd
-res://Resources/dialogue.tres
-res://Code/dialogue.gd
+res://Resources/Tiles.tres
+res://Scenes/player.tscn
+res://Scenes/ui.tscn
+res://Code/terrain.gd
+res://Code/camera.gd

@@ -12,8 +12,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			$Camera.zoom *= 0.9
-			if $Camera.zoom.x < 0.5:
-				$Camera.zoom = Vector2(0.5,0.5)
+			if $Camera.zoom.x < 0.2:
+				$Camera.zoom = Vector2(0.2,0.2)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			$Camera.zoom *= 1.1
 			if $Camera.zoom.x > 15:
