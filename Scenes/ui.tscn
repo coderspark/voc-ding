@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnv8u5qxyxnof"]
+[gd_scene load_steps=3 format=3 uid="uid://bnv8u5qxyxnof"]
 
 [ext_resource type="Texture2D" uid="uid://m8w1sb8n03tp" path="res://Art/dialogue_background.png" id="1_jxero"]
+[ext_resource type="Theme" uid="uid://di435lx1s86i2" path="res://Resources/dialogue.tres" id="2_qdvrb"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -12,7 +13,16 @@ grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogueBackground" type="Sprite2D" parent="."]
-position = Vector2(607, 540)
-scale = Vector2(20, 20)
+[node name="DialogueBackground" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(575, 539)
+scale = Vector2(18, 18)
 texture = ExtResource("1_jxero")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 236.0
+offset_top = 460.0
+offset_right = 1102.0
+offset_bottom = 602.0
+theme = ExtResource("2_qdvrb")
+text = "heyyyyy deidede de de d  d dddddd dddd dddd d d d ddddddddddddddddddddddddd dddddddddddddd dedededed"
+autowrap_mode = 3

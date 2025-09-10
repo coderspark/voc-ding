@@ -1,6 +1,7 @@
+Label
+Sprite2D
 CanvasLayer
 Control
-Label
 Timer
 Node2D
 CollisionShape2D
