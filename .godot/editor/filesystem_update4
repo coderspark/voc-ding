@@ -3,3 +3,4 @@ res://Resources/Tiles.tres
 res://Scenes/player.tscn
 res://Scenes/camera.gd
 res://Scenes/player.gd
+res://global.gd

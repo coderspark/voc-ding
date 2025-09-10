@@ -18,10 +18,15 @@ func _ready() -> void:
 			$"../Fog".set_cell(cell,0,Vector2i(15,1))
 
 func _process(delta: float) -> void:
+	$Label.text = "FPS: " + str(1/delta)
+	if Input.is_action_just_pressed("left"):
+		if on_water:
+			go_on_land()
+		else:
+			go_on_water()
 	if move:
 		var dir = to_local($Navigation.get_next_path_position()).normalized()
 		velocity = dir * 1100 * delta
-		print(dir.x)
 		if dir.x > 0:
 			if dir.x * old_dir_x > 0:
 				$Sprite.flip_h = true
@@ -44,19 +49,34 @@ func _on_terrain_click(pos:Vector2) -> void:
 func get_cells_around_player(pos:Vector2i):
 	var out = {}
 	for n in $"../Fog".get_surrounding_cells(pos):
-		out.set(n,0)
+		if n in out.keys():
+			out.set(n,0)
 		for x in  $"../Fog".get_surrounding_cells(n):
-			out.set(x,0)
+			if x in out.keys():
+				out.set(x,0)
 			for y in  $"../Fog".get_surrounding_cells(x):
-				if not y in out:
+				if not y in out.keys():
 					out.set(y,1)
 	return out
 
-
-func _on_navigation_target_reached() -> void:
-	if move:
-		print($Navigation.distance_to_target() * 0.07)
-		$Timer.start($Navigation.distance_to_target() * 0.07)
-		await $Timer.timeout
-		print("stop")
-		move = false
+func go_on_land():
+	for n in $"../Terrain".get_surrounding_cells($"../Terrain".local_to_map(position)):
+		if $"../Terrain".get_cell_atlas_coords(n) not in Global.water_types:
+			position = $"../Terrain".map_to_local(n)
+			$Sprite.play("land")
+			on_water = false
+			move = false
+			$Navigation.navigation_layers = 2
+			return 1
+	return 0
+		
+func go_on_water():
+	for n in $"../Terrain".get_surrounding_cells($"../Terrain".local_to_map(position)):
+		if $"../Terrain".get_cell_atlas_coords(n) in Global.water_types:
+			position = $"../Terrain".map_to_local(n)	
+			$Navigation.navigation_layers = 4
+			$Sprite.play("water")
+			on_water = true
+			move = false
+			return 1
+	return 0

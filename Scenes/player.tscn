@@ -1,16 +1,49 @@
-[gd_scene load_steps=11 format=3 uid="uid://uxsgyx5q7kwm"]
+[gd_scene load_steps=18 format=3 uid="uid://uxsgyx5q7kwm"]
 
 [ext_resource type="Texture2D" uid="uid://cmtgio3fr0s5s" path="res://Art/Animations/PlayerBoat/boat1.png" id="1_3smsa"]
 [ext_resource type="Script" uid="uid://bqhjwnm2l3mmt" path="res://Scenes/player.gd" id="1_8erm5"]
 [ext_resource type="Texture2D" uid="uid://dwhyyfk5inuh4" path="res://Art/Animations/PlayerBoat/boat2.png" id="2_8erm5"]
+[ext_resource type="Texture2D" uid="uid://dx6folr8tovnb" path="res://Art/Animations/EnemyBoat/enemyboat1.png" id="2_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://jifpxbjtw2tr" path="res://Art/Animations/PlayerBoat/boat3.png" id="3_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://jyyr6q8vto2k" path="res://Art/Animations/EnemyBoat/enemyboat2.png" id="3_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://ve5x5cpsvpk3" path="res://Art/Animations/EnemyBoat/enemyboat3.png" id="4_qqcod"]
 [ext_resource type="Texture2D" uid="uid://ba1yxv2xe7udy" path="res://Art/Animations/PlayerBoat/boat4.png" id="4_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://bu3di68i1v6jt" path="res://Art/Animations/PlayerBoat/boat5.png" id="5_gymyn"]
+[ext_resource type="Texture2D" uid="uid://cvx3d5ckjr145" path="res://Art/Animations/EnemyBoat/enemyboat4.png" id="5_igrcy"]
+[ext_resource type="Texture2D" uid="uid://b6ib30ce7cnd6" path="res://Art/Animations/EnemyBoat/enemyboat5.png" id="6_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://c1utllhjf6833" path="res://Art/Animations/PlayerBoat/boat6.png" id="6_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://cagtixnqmpegs" path="res://Art/Animations/EnemyBoat/enemyboat6.png" id="7_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://chhqxoh6pcrno" path="res://Art/Animations/PlayerBoat/boat7.png" id="7_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://c00fg0mwiwc3l" path="res://Art/Animations/EnemyBoat/enemyboat7.png" id="8_olqyp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7dp3o"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h4iuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fd4e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qqcod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_igrcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fs7ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l6n3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_olqyp")
+}],
+"loop": true,
+"name": &"land",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_3smsa")
@@ -34,7 +67,7 @@ animations = [{
 "texture": ExtResource("7_ukyrk")
 }],
 "loop": true,
-"name": &"default",
+"name": &"water",
 "speed": 5.0
 }]
 
@@ -48,8 +81,8 @@ script = ExtResource("1_8erm5")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_7dp3o")
-autoplay = "default"
-frame_progress = 0.285753
+animation = &"land"
+autoplay = "water"
 speed_scale = 2.0
 
 [node name="Navigation" type="NavigationAgent2D" parent="."]
@@ -73,5 +106,9 @@ shape = SubResource("RectangleShape2D_8erm5")
 disabled = true
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="target_reached" from="Navigation" to="." method="_on_navigation_target_reached"]
