@@ -28,6 +28,16 @@ offset_bottom = 602.0
 theme = ExtResource("2_qdvrb")
 autowrap_mode = 3
 
+[node name="Name" type="Label" parent="CanvasLayer"]
+offset_left = 64.0
+offset_top = 455.0
+offset_right = 216.0
+offset_bottom = 507.0
+theme = ExtResource("2_qdvrb")
+text = "Mary"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.03
 one_shot = true
