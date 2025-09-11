@@ -38,7 +38,14 @@ func Generate(noiseseed):
 				if atlascoords.y == 0 && atlascoords.x < 2 && featurenoise.noise.get_noise_2d(x*10,y*10) > -0.2 && featurenoise.noise.get_noise_2d(x*10,y*10) < 0.1:
 					atlascoords += Vector2i(0, 1)
 				if atlascoords == Vector2i(2, 0) && featurenoise.noise.get_noise_2d(x*100,y*100) > 0.42: # haha 42 life the universe and everything :p
-					atlascoords.y += 1
+					atlascoords.x += 2
+				if atlascoords == Vector2i(4, 0) && randi_range(0, 1) == 0:
+					atlascoords = Vector2i(4, 1)
+				if atlascoords == Vector2i(1, 0) && randi_range(0, 1) == 0:
+					atlascoords = Vector2i(1, 2)
+				if atlascoords == Vector2i(0, 1):
+					atlascoords.y += randi_range(0, 2)
+				
 			set_cell(Vector2i(x-128, y-128), 0, atlascoords)
 func _ready():
 	Generate(randi())
