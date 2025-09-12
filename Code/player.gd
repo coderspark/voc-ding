@@ -8,6 +8,9 @@ var target : Vector2
 
 var old_dir_x = 0
 
+var fog_relatives = {Vector2i(3, 0): 1,Vector2i(3, 1): 1,Vector2i(2, 1): 0,Vector2i(1, 0): 0,Vector2i(2, -1): 0,Vector2i(3, -1): 1,Vector2i(2, 2): 1,Vector2i(1, 2): 0,Vector2i(1, 1): 0,Vector2i(2, 0): 1,Vector2i(0, 2): 0,Vector2i(0, 1): 0,Vector2i(0, 0): 0,Vector2i(-1, 0): 0,Vector2i(0, -1): 0,Vector2i(1, -1): 0,Vector2i(0, -2): 0,Vector2i(1, -2): 0,Vector2i(2, -2): 1,Vector2i(2, 3): 1,Vector2i(1, 3): 1,Vector2i(0, 3): 1,Vector2i(-1, 2): 0,Vector2i(-1, 1): 0,Vector2i(-1, 3): 1,Vector2i(-2, 2): 1,Vector2i(-2, 1): 1,Vector2i(-2, 0): 0,Vector2i(-1, -1): 0,Vector2i(-3, 0): 1,Vector2i(-2, -1): 1,Vector2i(-2, -2): 1,Vector2i(-1, -2): 0,Vector2i(-1, -3): 1,Vector2i(0, -3): 1,Vector2i(1, -3): 1,Vector2i(2, -3): 1 }
+
+
 func _ready() -> void:
 	$Navigation.target_position = position
 	var a = get_cells_around_player($"../Fog".local_to_map(global_position))
@@ -34,32 +37,20 @@ func _process(delta: float) -> void:
 				$Sprite.flip_h = false
 		old_dir_x = dir.x
 		move_and_slide()
-		var a = get_cells_around_player($"../Fog".local_to_map(global_position))
+		var n = $"../Fog".local_to_map(global_position)
+		var a = get_cells_around_player(n)
 		for cell in a.keys():
-			if a[cell] == 0:
-				$"../Fog".erase_cell(cell)
-			elif not $"../Fog".get_cell_atlas_coords(cell) == Vector2i(-1,-1):
-				$"../Fog".set_cell(cell,0,Vector2i(15,1))
+			if a[cell] == 0 and not $"../Fog".get_cell_atlas_coords(cell + n) == Vector2i(-1,-1):
+				$"../Fog".erase_cell(cell + n)
+			elif not $"../Fog".get_cell_atlas_coords(cell + n) == Vector2i(-1,-1):
+				$"../Fog".set_cell(cell + n,0,Vector2i(15,1))
 func _on_terrain_click(pos:Vector2) -> void:
 	$Navigation.target_position = pos
 	target = pos
 	move = true
 
 func get_cells_around_player(pos:Vector2i):
-	var out = {}
-	for n in $"../Fog".get_surrounding_cells(pos):
-		if n in out.keys():
-			out.set(n,0)
-		for x in  $"../Fog".get_surrounding_cells(n):
-			if x in out.keys():
-				out.set(x,0)
-			for y in  $"../Fog".get_surrounding_cells(x):
-				if not y in out.keys():
-					out.set(y,1)
-	var x = {}
-	for n in out.keys():
-		x.set(n - pos, out[n])
-	return out
+	return fog_relatives.duplicate()
 
 func go_on_land():
 	for n in $"../Terrain".get_surrounding_cells($"../Terrain".local_to_map(position)):
