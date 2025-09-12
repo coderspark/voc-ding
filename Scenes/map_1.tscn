@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bke41102xy33f"]
+[gd_scene load_steps=7 format=3 uid="uid://bke41102xy33f"]
 
 [ext_resource type="TileSet" uid="uid://b6osua7h5uv17" path="res://Resources/Tiles.tres" id="1_dcmhf"]
 [ext_resource type="Script" uid="uid://6aumydptblmg" path="res://Code/camera.gd" id="1_k5iew"]
 [ext_resource type="PackedScene" uid="uid://uxsgyx5q7kwm" path="res://Scenes/player.tscn" id="2_gt30j"]
 [ext_resource type="Script" uid="uid://dp8mh5mx1njtb" path="res://Code/terrain.gd" id="2_k5iew"]
 [ext_resource type="Script" uid="uid://6k4xfwj5d5ni" path="res://Scenes/fog.gd" id="3_lmd5f"]
+[ext_resource type="Script" uid="uid://bvwl5sp8we47c" path="res://Scenes/grid.gd" id="6_ptrbc"]
 
 [node name="Main" type="Node2D"]
 
@@ -17,7 +18,14 @@ visible = false
 tile_set = ExtResource("1_dcmhf")
 script = ExtResource("3_lmd5f")
 
+[node name="Grid" type="TileMapLayer" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.184314)
+tile_set = ExtResource("1_dcmhf")
+script = ExtResource("6_ptrbc")
+
 [node name="Player" parent="." instance=ExtResource("2_gt30j")]
+z_index = 2
 
 [node name="Camera" type="Node2D" parent="."]
 script = ExtResource("1_k5iew")
