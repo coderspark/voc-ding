@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnv8u5qxyxnof"]
+[gd_scene load_steps=5 format=3 uid="uid://bnv8u5qxyxnof"]
 
 [ext_resource type="Texture2D" uid="uid://m8w1sb8n03tp" path="res://Art/dialogue_background.png" id="1_jxero"]
 [ext_resource type="Script" uid="uid://bo0migcv1yfd4" path="res://Code/dialogue.gd" id="1_nf4gj"]
 [ext_resource type="Theme" uid="uid://di435lx1s86i2" path="res://Resources/dialogue.tres" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://bovrw4fsdgrlf" path="res://Art/Characters.png" id="4_2246s"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -28,7 +29,7 @@ offset_bottom = 602.0
 theme = ExtResource("2_qdvrb")
 autowrap_mode = 3
 
-[node name="Name" type="Label" parent="CanvasLayer"]
+[node name="Character name" type="Label" parent="CanvasLayer"]
 offset_left = 64.0
 offset_top = 455.0
 offset_right = 216.0
@@ -37,6 +38,13 @@ theme = ExtResource("2_qdvrb")
 text = "Mary"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Character" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(135, 553)
+scale = Vector2(5, 5)
+texture = ExtResource("4_2246s")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.03
