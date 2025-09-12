@@ -95,9 +95,8 @@ avoidance_layers = 3
 avoidance_mask = 3
 debug_enabled = true
 debug_use_custom = true
-debug_path_custom_color = Color(0.552956, 0.552956, 0.552956, 1)
+debug_path_custom_color = Color(0.31802, 0.31802, 0.31802, 1)
 debug_path_custom_point_size = 0.0
-debug_path_custom_line_width = 1.0
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.25)

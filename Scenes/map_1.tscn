@@ -14,7 +14,6 @@ tile_set = ExtResource("1_dcmhf")
 script = ExtResource("2_k5iew")
 
 [node name="Fog" type="TileMapLayer" parent="."]
-visible = false
 tile_set = ExtResource("1_dcmhf")
 script = ExtResource("3_lmd5f")
 
