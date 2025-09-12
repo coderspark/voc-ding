@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://6aumydptblmg" path="res://Code/camera.gd" id="1_k5iew"]
 [ext_resource type="PackedScene" uid="uid://uxsgyx5q7kwm" path="res://Scenes/player.tscn" id="2_gt30j"]
 [ext_resource type="Script" uid="uid://dp8mh5mx1njtb" path="res://Code/terrain.gd" id="2_k5iew"]
-[ext_resource type="Script" uid="uid://6k4xfwj5d5ni" path="res://Scenes/fog.gd" id="3_lmd5f"]
-[ext_resource type="Script" uid="uid://bvwl5sp8we47c" path="res://Scenes/grid.gd" id="6_ptrbc"]
+[ext_resource type="Script" uid="uid://6k4xfwj5d5ni" path="res://Code/fog.gd" id="3_lmd5f"]
+[ext_resource type="Script" uid="uid://bvwl5sp8we47c" path="res://Code/grid.gd" id="6_ptrbc"]
 
 [node name="Main" type="Node2D"]
 

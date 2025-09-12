@@ -56,6 +56,9 @@ func get_cells_around_player(pos:Vector2i):
 			for y in  $"../Fog".get_surrounding_cells(x):
 				if not y in out.keys():
 					out.set(y,1)
+	var x = {}
+	for n in out.keys():
+		x.set(n - pos, out[n])
 	return out
 
 func go_on_land():
