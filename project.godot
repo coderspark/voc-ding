@@ -21,7 +21,9 @@ Global="*res://Code/global.gd"
 
 [display]
 
+window/size/mode=1
 window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [file_customization]
 

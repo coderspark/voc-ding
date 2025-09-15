@@ -1,26 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnv8u5qxyxnof"]
+[gd_scene load_steps=8 format=3 uid="uid://bnv8u5qxyxnof"]
 
 [ext_resource type="Texture2D" uid="uid://m8w1sb8n03tp" path="res://Art/dialogue_background.png" id="1_jxero"]
 [ext_resource type="Script" uid="uid://bo0migcv1yfd4" path="res://Code/dialogue.gd" id="1_nf4gj"]
 [ext_resource type="Theme" uid="uid://di435lx1s86i2" path="res://Resources/dialogue.tres" id="2_qdvrb"]
 [ext_resource type="Texture2D" uid="uid://bovrw4fsdgrlf" path="res://Art/Characters.png" id="4_2246s"]
 [ext_resource type="Texture2D" uid="uid://bl5ethorpe5en" path="res://Art/Icons/Coin.png" id="5_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://dkp8twyh5gic2" path="res://Art/topbar.png" id="6_m78vo"]
+[ext_resource type="Texture2D" uid="uid://cu5vswtfaj8v0" path="res://Art/Icons/Menu.png" id="7_smcll"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -11.0
+offset_right = 4.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nf4gj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Coin" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(39.75, 42.75)
-scale = Vector2(4.26471, 4.26471)
-texture = ExtResource("5_q7pk6")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -59,6 +60,43 @@ scale = Vector2(5, 5)
 texture = ExtResource("4_2246s")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
+
+[node name="TopBar" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TopBar"]
+z_index = -3
+position = Vector2(577, 25)
+scale = Vector2(19.2167, 9.7)
+texture = ExtResource("6_m78vo")
+
+[node name="Money" type="Control" parent="CanvasLayer/TopBar"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Character name" type="Label" parent="CanvasLayer/TopBar/Money"]
+modulate = Color(1, 0.737255, 0, 1)
+offset_left = 99.0
+offset_top = -1.0
+offset_right = 146.0
+offset_bottom = 51.0
+theme = ExtResource("2_qdvrb")
+text = "100"
+
+[node name="Coin" type="Sprite2D" parent="CanvasLayer/TopBar/Money"]
+z_index = 1
+position = Vector2(72, 25)
+scale = Vector2(2.38235, 2.38235)
+texture = ExtResource("5_q7pk6")
+
+[node name="Menu" type="Sprite2D" parent="CanvasLayer/TopBar"]
+position = Vector2(24.5, 24.5)
+scale = Vector2(2.5625, 2.5625)
+texture = ExtResource("7_smcll")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.03
