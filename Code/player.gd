@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 100
+var speed = 30
 
 var on_water = true
 var move = false
@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 			go_on_water()
 	if move:
 		var dir = to_local($Navigation.get_next_path_position()).normalized()
-		velocity = dir * 60
+		velocity = dir * speed
 		if dir.x > 0:
 			if dir.x * old_dir_x > 0:
 				$Sprite.flip_h = true

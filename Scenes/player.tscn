@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://uxsgyx5q7kwm"]
+[gd_scene load_steps=19 format=3 uid="uid://uxsgyx5q7kwm"]
 
 [ext_resource type="Texture2D" uid="uid://cmtgio3fr0s5s" path="res://Art/Animations/PlayerBoat/boat1.png" id="1_3smsa"]
 [ext_resource type="Script" uid="uid://bqhjwnm2l3mmt" path="res://Code/player.gd" id="1_8erm5"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cagtixnqmpegs" path="res://Art/Animations/EnemyBoat/enemyboat6.png" id="7_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://chhqxoh6pcrno" path="res://Art/Animations/PlayerBoat/boat7.png" id="7_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://c00fg0mwiwc3l" path="res://Art/Animations/EnemyBoat/enemyboat7.png" id="8_olqyp"]
+[ext_resource type="PackedScene" uid="uid://bnv8u5qxyxnof" path="res://Scenes/ui.tscn" id="16_fd4e3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7dp3o"]
 animations = [{
@@ -102,6 +103,8 @@ debug_path_custom_point_size = 0.0
 position = Vector2(0, -0.25)
 shape = SubResource("RectangleShape2D_8erm5")
 disabled = true
+
+[node name="UI" parent="." instance=ExtResource("16_fd4e3")]
 
 [node name="Timer" type="Timer" parent="."]
 

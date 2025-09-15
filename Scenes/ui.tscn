@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnv8u5qxyxnof"]
+[gd_scene load_steps=6 format=3 uid="uid://bnv8u5qxyxnof"]
 
 [ext_resource type="Texture2D" uid="uid://m8w1sb8n03tp" path="res://Art/dialogue_background.png" id="1_jxero"]
 [ext_resource type="Script" uid="uid://bo0migcv1yfd4" path="res://Code/dialogue.gd" id="1_nf4gj"]
 [ext_resource type="Theme" uid="uid://di435lx1s86i2" path="res://Resources/dialogue.tres" id="2_qdvrb"]
 [ext_resource type="Texture2D" uid="uid://bovrw4fsdgrlf" path="res://Art/Characters.png" id="4_2246s"]
+[ext_resource type="Texture2D" uid="uid://bl5ethorpe5en" path="res://Art/Icons/Coin.png" id="5_q7pk6"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -16,12 +17,24 @@ script = ExtResource("1_nf4gj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogueBackground" type="Sprite2D" parent="CanvasLayer"]
+[node name="Coin" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(39.75, 42.75)
+scale = Vector2(4.26471, 4.26471)
+texture = ExtResource("5_q7pk6")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBackground" type="Sprite2D" parent="CanvasLayer/Control"]
 position = Vector2(575, 539)
 scale = Vector2(18, 18)
 texture = ExtResource("1_jxero")
 
-[node name="Text" type="Label" parent="CanvasLayer"]
+[node name="Text" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 236.0
 offset_top = 460.0
 offset_right = 1102.0
@@ -29,7 +42,8 @@ offset_bottom = 602.0
 theme = ExtResource("2_qdvrb")
 autowrap_mode = 3
 
-[node name="Character name" type="Label" parent="CanvasLayer"]
+[node name="Character name" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 455.0
 offset_right = 216.0
@@ -39,7 +53,7 @@ text = "Mary"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Character" type="Sprite2D" parent="CanvasLayer"]
+[node name="Character" type="Sprite2D" parent="CanvasLayer/Control"]
 position = Vector2(135, 553)
 scale = Vector2(5, 5)
 texture = ExtResource("4_2246s")
