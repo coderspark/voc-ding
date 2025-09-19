@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmvflavdkdp78"
-path="res://.godot/imported/Silk.png-48ebea3838eaf8998ed265d6a240c21c.ctex"
+uid="uid://b11mxkhf4rxrr"
+path="res://.godot/imported/Arrow.png-b56f04d1758996141f2ed93e732b5504.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Icons/Silk.png"
-dest_files=["res://.godot/imported/Silk.png-48ebea3838eaf8998ed265d6a240c21c.ctex"]
+source_file="res://Art/Arrow.png"
+dest_files=["res://.godot/imported/Arrow.png-b56f04d1758996141f2ed93e732b5504.ctex"]
 
 [params]
 

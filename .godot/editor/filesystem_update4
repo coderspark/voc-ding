@@ -1,5 +1,6 @@
-res://Scenes/ui.tscn
-res://Resources/Tiles.tres
 res://Scenes/player.tscn
-res://Scenes/map_1.tscn
 res://Resources/dialogue.tres
+res://Resources/Tiles.tres
+res://Scenes/ui.tscn
+res://Scenes/map_1.tscn
+res://Code/food.gd

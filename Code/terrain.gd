@@ -58,6 +58,8 @@ func Generate(noiseseed):
 					atlascoords = Vector2i(1, 2)
 				if atlascoords == Vector2i(0, 1):
 					atlascoords.y += randi_range(0, 2)
+				if featurenoise.noise.get_noise_2d(y * 500, x * 500) > 0.6:
+					atlascoords = Vector2i(0, 6)
 			
 			# Set the cell finally
 			set_cell(Vector2i(x-128, y-128), 0, atlascoords)
@@ -66,5 +68,5 @@ func _ready():
 	Generate(randi())
 # Check for click on terrain for movement
 func _input(event: InputEvent) -> void:
-	if event.is_action("lmb") and event.is_pressed():
+	if event.is_action("lmb") and event.is_pressed() and get_viewport().get_mouse_position().y > 60:
 		$"../Player"._on_terrain_click(map_to_local(local_to_map(get_global_mouse_position())))

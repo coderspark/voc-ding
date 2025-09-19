@@ -44,8 +44,8 @@ func _process(delta: float) -> void:
 				$"../Fog".erase_cell(cell + n)
 			elif not $"../Fog".get_cell_atlas_coords(cell + n) == Vector2i(-1,-1):
 				$"../Fog".set_cell(cell + n,0,Vector2i(15,1))
-		if position.distance_to($Navigation.get_final_position()) < 0.5:
-			move = false
+		#if position.distance_to($Navigation.get_final_position()) < 1:
+			#move = false
 func _on_terrain_click(pos:Vector2) -> void:
 	$Navigation.target_position = pos
 	target = pos

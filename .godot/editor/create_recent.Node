@@ -1,10 +1,11 @@
-Sprite2D
-Control
 Label
-TileMapLayer
 Timer
-CanvasLayer
+MenuButton
+Sprite2D
 Node2D
+Control
+TileMapLayer
+CanvasLayer
 CollisionShape2D
 CharacterBody2D
 NavigationAgent2D
