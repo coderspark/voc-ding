@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2nbnpy3pgj5w"
-path="res://.godot/imported/spices.png-1f5cb60fa1dceacaf4d8466ff69bb202.ctex"
+uid="uid://sr7g0y6i4lvv"
+path="res://.godot/imported/Mercury.png-102634c01b800a7bf2f57f2e8f3137e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Icons/Luxuries/spices.png"
-dest_files=["res://.godot/imported/spices.png-1f5cb60fa1dceacaf4d8466ff69bb202.ctex"]
+source_file="res://Art/Icons/Luxuries/Mercury.png"
+dest_files=["res://.godot/imported/Mercury.png-102634c01b800a7bf2f57f2e8f3137e0.ctex"]
 
 [params]
 

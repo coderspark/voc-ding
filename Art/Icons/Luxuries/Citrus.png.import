@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2nbnpy3pgj5w"
-path="res://.godot/imported/spices.png-1f5cb60fa1dceacaf4d8466ff69bb202.ctex"
+uid="uid://by8eefryk1kao"
+path="res://.godot/imported/Citrus.png-b880a544e922373a1b665a8157de7a50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Icons/Luxuries/spices.png"
-dest_files=["res://.godot/imported/spices.png-1f5cb60fa1dceacaf4d8466ff69bb202.ctex"]
+source_file="res://Art/Icons/Luxuries/Citrus.png"
+dest_files=["res://.godot/imported/Citrus.png-b880a544e922373a1b665a8157de7a50.ctex"]
 
 [params]
 

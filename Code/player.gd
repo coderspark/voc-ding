@@ -10,6 +10,7 @@ var old_dir_x = 0
 
 var fog_relatives = {Vector2i(3, 0): 1,Vector2i(3, 1): 1,Vector2i(2, 1): 0,Vector2i(1, 0): 0,Vector2i(2, -1): 0,Vector2i(3, -1): 1,Vector2i(2, 2): 1,Vector2i(1, 2): 0,Vector2i(1, 1): 0,Vector2i(2, 0): 1,Vector2i(0, 2): 0,Vector2i(0, 1): 0,Vector2i(0, 0): 0,Vector2i(-1, 0): 0,Vector2i(0, -1): 0,Vector2i(1, -1): 0,Vector2i(0, -2): 0,Vector2i(1, -2): 0,Vector2i(2, -2): 1,Vector2i(2, 3): 1,Vector2i(1, 3): 1,Vector2i(0, 3): 1,Vector2i(-1, 2): 0,Vector2i(-1, 1): 0,Vector2i(-1, 3): 1,Vector2i(-2, 2): 1,Vector2i(-2, 1): 1,Vector2i(-2, 0): 0,Vector2i(-1, -1): 0,Vector2i(-3, 0): 1,Vector2i(-2, -1): 1,Vector2i(-2, -2): 1,Vector2i(-1, -2): 0,Vector2i(-1, -3): 1,Vector2i(0, -3): 1,Vector2i(1, -3): 1,Vector2i(2, -3): 1 }
 
+var inventory = {"Bread":5,"Silk":1}
 
 func _ready() -> void:
 	$Navigation.target_position = position

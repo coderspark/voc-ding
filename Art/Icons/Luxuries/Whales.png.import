@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bl1dpqy8t6q5a"
-path="res://.godot/imported/Whales.png-f052de9aab19c668d95bc0e3e690c1c9.ctex"
+path="res://.godot/imported/Whales.png-a4e98fc59afefae6bb1ee3bbfcec26b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Icons/Whales.png"
-dest_files=["res://.godot/imported/Whales.png-f052de9aab19c668d95bc0e3e690c1c9.ctex"]
+source_file="res://Art/Icons/Luxuries/Whales.png"
+dest_files=["res://.godot/imported/Whales.png-a4e98fc59afefae6bb1ee3bbfcec26b8.ctex"]
 
 [params]
 

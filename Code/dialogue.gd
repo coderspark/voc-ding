@@ -27,3 +27,6 @@ func _ready() -> void:
 		["hey!","Mary"],["hey!","Bert"],["Do you want to see my trade offer?","Mary"],["Yeah, sure!","Bert"],
 		["tim","Drgehaktbal01"],
 	])
+
+func show_trade_menu():
+	
