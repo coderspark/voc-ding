@@ -2,6 +2,7 @@ extends Node
 
 const water_types = [Vector2i(5,0),Vector2i(6,0)]
 
+var avg_item_vals = {"Whale":1000,"Turtle":100,"Citrus":20,"Coffee":30,"Gems":200}
 
 # Example trade deal: {"AskedItem1":["Silk",2],"AskedItem2":["Coffee",1],"ReturnItem":["Gold",10],"Stock":3}
 class Trader:

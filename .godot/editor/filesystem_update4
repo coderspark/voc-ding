@@ -1,6 +1,6 @@
 res://Scenes/ui.tscn
 res://Resources/dialogue.tres
 res://Resources/Tiles.tres
-res://Code/dialogue.gd
-res://Code/player.gd
-res://Code/global.gd
+res://Scenes/player.tscn
+res://Scenes/map_1.tscn
+res://title.tscn

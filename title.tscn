@@ -1,0 +1,264 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2sf5mhsutxdx"]
+
+[ext_resource type="Script" uid="uid://dac5dge1hpl2x" path="res://title.gd" id="1_kpexm"]
+[ext_resource type="FontFile" uid="uid://d2ksrw0nqx5b3" path="res://Fonts/Jersey10-Regular.ttf" id="2_3xoar"]
+[ext_resource type="PackedScene" uid="uid://bke41102xy33f" path="res://Scenes/map_1.tscn" id="2_mom7w"]
+[ext_resource type="Theme" uid="uid://di435lx1s86i2" path="res://Resources/dialogue.tres" id="3_7lgly"]
+[ext_resource type="Texture2D" uid="uid://b7f60vdsrqfbn" path="res://Art/fM_EbcuZFuqszKfYHLpnZEFgP1aFPdPxuDu9iP8rrkU.webp" id="3_0824t"]
+[ext_resource type="Texture2D" uid="uid://cxc8m2wrppah7" path="res://Art/Button.png" id="3_mom7w"]
+
+[sub_resource type="Animation" id="Animation_lx2ly"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(970, 531)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ColorRect2:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.27, 0.27, 0.27, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nuqgq"]
+resource_name = "idle"
+length = 21.0
+loop_mode = 1
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 21),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(970, 531), Vector2(199, 113)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 21),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ColorRect2:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 20.499, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jil77"]
+_data = {
+&"RESET": SubResource("Animation_lx2ly"),
+&"idle": SubResource("Animation_nuqgq")
+}
+
+[sub_resource type="Animation" id="Animation_0824t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QUIT:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PLAY:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [48]
+}
+
+[sub_resource type="Animation" id="Animation_7lgly"]
+resource_name = "ide"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QUIT:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.498781, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.14159, 0.0, -6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PLAY:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.498781, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.14159, 0.0, -6.28319]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [48, 70, 48]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nuqgq"]
+_data = {
+&"RESET": SubResource("Animation_0824t"),
+&"ide": SubResource("Animation_7lgly")
+}
+
+[node name="TITLE" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kpexm")
+game = ExtResource("2_mom7w")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(970, 531)
+texture = ExtResource("3_0824t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../BG")
+libraries = {
+&"": SubResource("AnimationLibrary_jil77")
+}
+autoplay = "idle"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = -45.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.27, 0.27, 0.27, 0)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 164.0
+offset_right = 1152.0
+offset_bottom = 216.0
+theme = ExtResource("3_7lgly")
+theme_override_font_sizes/font_size = 48
+text = "CIV WORLD EXPLORER 6"
+horizontal_alignment = 1
+
+[node name="PLAY" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.9642
+offset_top = 286.397
+offset_right = 1099.96
+offset_bottom = 568.397
+scale = Vector2(0.208384, 0.208384)
+pivot_offset = Vector2(540, 141)
+theme_override_fonts/font = ExtResource("2_3xoar")
+theme_override_font_sizes/font_size = 255
+text = "PLAY"
+icon = ExtResource("3_mom7w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="QUIT" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.9642
+offset_top = 354.397
+offset_right = 1099.96
+offset_bottom = 636.396
+scale = Vector2(0.208384, 0.208384)
+pivot_offset = Vector2(540, 141)
+theme_override_fonts/font = ExtResource("2_3xoar")
+theme_override_font_sizes/font_size = 255
+text = "QUIT"
+icon = ExtResource("3_mom7w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 186.0
+offset_right = 443.0
+offset_bottom = 191.0
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nuqgq")
+}
+autoplay = "ide"
+
+[connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="QUIT" to="." method="_on_quit_pressed"]

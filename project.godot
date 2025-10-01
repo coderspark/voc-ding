@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Voc ding"
-run/main_scene="uid://bke41102xy33f"
+run/main_scene="uid://c2sf5mhsutxdx"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Art/Temporary/icon.svg"
 

@@ -25,8 +25,5 @@ func show_dialogue(data:Array):
 func _ready() -> void:
 	show_dialogue([
 		["hey!","Mary"],["hey!","Bert"],["Do you want to see my trade offer?","Mary"],["Yeah, sure!","Bert"],
-		["tim","Drgehaktbal01"],
+		["","Bert"],
 	])
-
-func show_trade_menu():
-	
